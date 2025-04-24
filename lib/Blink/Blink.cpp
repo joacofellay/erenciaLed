@@ -1,6 +1,6 @@
 #include "Blink.h"
 #include <Arduino.h> // libreria de arduino
-Blink::Blink() : Led() { // constructor por defecto
+Blink::Blink() : Led(13) { // constructor por defecto, assuming pin 13 as default
     tiempo = 1000; // tiempo por defecto
     Serial.println("Constructor Blink por defecto"); // mensaje de constructor por defecto
 }

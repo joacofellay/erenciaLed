@@ -1,18 +1,14 @@
 #include <Arduino.h>
+#include <Blink.h>
 
-// put function declarations here:
-int myFunction(int, int);
 
 void setup() {
-  // put your setup code here, to run once:
-  int result = myFunction(2, 3);
+Serial.begin(9600); // inicializa la comunicacion serial a 9600 bps
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  {Blink led(13); // objeto led de la clase Blink en el pin 13}
+led.parpadear(); // parpadeo de led con tiempo por defecto  
+  }
 }
 
-// put function definitions here:
-int myFunction(int x, int y) {
-  return x + y;
-}
